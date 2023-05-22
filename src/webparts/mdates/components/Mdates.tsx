@@ -18,7 +18,7 @@ import { Lists } from '@pnp/sp/lists';
 export default class Mdates extends React.Component<IMdatesProps, IMdatesState, {}> {
   constructor(props: IMdatesProps, state: IMdatesState) {
     super(props);
-    sp.setup({ spfxcontext: this.props.context });
+    // sp.setup({ spfxcontext: this.props.context });
     this.state = ({ startDate: new Date(), endDate: null, key: 'selection' })
     this.getValuesFromSP();
   }
@@ -29,7 +29,7 @@ export default class Mdates extends React.Component<IMdatesProps, IMdatesState, 
       <div className={styles.mdates}>
         <DateRange
           editableDateInputs={true}
-          onChange={item => this.setState({ endDate: this.selection["endDate"], startDate: this.selection["startDate"] })}
+          // onChange={item => this.setState({ endDate: this.selection["endDate"], startDate: this.selection["startDate"] })}
           moveRangeOnFirstSelection={false}
           ranges={state}
         />
